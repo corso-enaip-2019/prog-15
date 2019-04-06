@@ -14,7 +14,7 @@ namespace Esercizio4
             Stopwatch testCalculatePrimeNumbers = new Stopwatch();
             testCalculatePrimeNumbers.Start();
 
-            List<int> primeNumbers = CalculatePimeNumbers(10000); 
+            List<int> primeNumbers = CalculatePrimeNumbers(10000); 
 
             testCalculatePrimeNumbers.Stop();
             TimeSpan time = testCalculatePrimeNumbers.Elapsed;
@@ -36,7 +36,7 @@ namespace Esercizio4
             Console.Read();
         }
 
-        public static List<int> CalculatePimeNumbers(int numMax)
+        public static List<int> CalculatePrimeNumbers(int numMax)
         {
             List<int> primeNumbers = new List<int>();
             int number = 2;

@@ -20,12 +20,12 @@ namespace Esercizio10
             {
                 d.Draw();
             }
-           
+
 
             Console.Read();
         }
 
-        
+
     }
 
 
@@ -39,12 +39,9 @@ namespace Esercizio10
                 Console.Write("_");
             }
             Console.WriteLine();
-            for (int i = 1; i < LengthSide; i++)
+            for (int i = 0; i < LengthSide; i++)
             {
-                for (int j = 0; j <= LengthSide - 2; j++)
-                {
-                    Console.WriteLine("|" + "|".PadLeft(LengthSide));
-                }
+                Console.WriteLine("|" + "|".PadLeft(LengthSide));
             }
             for (int i = 0; i < LengthSide; i++)
             {
@@ -72,18 +69,16 @@ namespace Esercizio10
                 Console.Write("_");
             }
             Console.WriteLine();
-            for (int i = 1; i < HeightSide; i++)
+            for (int i = 0; i < HeightSide; i++)
             {
-                for (int j = 0; j <= (LengthSide - 2) / 2; j++)
-                {
-                    Console.WriteLine("|" + "|".PadLeft(LengthSide));
-                }
+                Console.WriteLine("|" + "|".PadLeft(LengthSide));
             }
             for (int i = 0; i < LengthSide; i++)
             {
                 Console.Write("_");
             }
             Console.WriteLine();
+            
         }
         public Rectangle(int lenghtSide, int heightSide)
         {
@@ -99,12 +94,14 @@ namespace Esercizio10
         {
             for (int i = 0; i < LengthSide; i++)
             {
-                for (int j = 0; j < LengthSide; j++)
-                {
-                    Console.WriteLine("/".PadLeft(LengthSide - i));
-                }
-                
+                Console.WriteLine("/".PadLeft(LengthSide - i) + "\\".PadLeft(2 * i + 1));
             }
+
+            for (int i = 0; i < LengthSide; i++)
+            {
+                Console.WriteLine("\\".PadLeft(i + 1) + "/".PadLeft((2 * LengthSide) - (2 * i) - 1));
+            }
+            Console.WriteLine();
         }
         public Rhombus(int lenghtSide)
         {
