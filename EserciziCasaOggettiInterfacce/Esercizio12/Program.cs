@@ -21,9 +21,11 @@ namespace Esercizio12
             chiara.AggiungiAmico(giovanni);
             chiara.AggiungiAmico(giulia);
 
-            giulia.AggiungiAmico(chiara);
             giulia.AggiungiAmico(giovanni);
 
+            //Test per controllare che non ci siano copie dello stesso amico nella lista
+            //Giulia è già stata aggiunta agli amici da Chiara
+            giulia.AggiungiAmico(chiara);
 
             Bambino.StampaListaAmiciBambino(mario);
             Bambino.StampaListaAmiciBambino(chiara);
@@ -44,13 +46,13 @@ namespace Esercizio12
 
         public void AggiungiAmico(Bambino bambino)
         {
-            
-                if (!bambino.Amici.Contains(this))
-                {
-                    Amici.Add(bambino);
-                    bambino.Amici.Add(this);
-                }
-            
+
+            if (!bambino.Amici.Contains(this))
+            {
+                Amici.Add(bambino);
+                bambino.Amici.Add(this);
+            }
+
 
         }
 
